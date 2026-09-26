@@ -1,0 +1,364 @@
+﻿2026-09-26T16:41:00.7936531Z Current runner version: '2.337.0'
+2026-09-26T16:41:00.7972869Z ##[group]Runner Image Provisioner
+2026-09-26T16:41:00.7974322Z Hosted Compute Agent
+2026-09-26T16:41:00.7975584Z Version: 20260828.587
+2026-09-26T16:41:00.7976704Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-26T16:41:00.7978340Z Build Date: 2026-08-28T16:44:25Z
+2026-09-26T16:41:00.7979795Z Worker ID: {b530b3d0-e553-401e-bc9f-f3ce5e15cf1d}
+2026-09-26T16:41:00.7981206Z Azure Region: northcentralus
+2026-09-26T16:41:00.7982492Z ##[endgroup]
+2026-09-26T16:41:00.7985016Z ##[group]Operating System
+2026-09-26T16:41:00.7986171Z Ubuntu
+2026-09-26T16:41:00.7987194Z 24.04.5
+2026-09-26T16:41:00.7988454Z LTS
+2026-09-26T16:41:00.7989529Z ##[endgroup]
+2026-09-26T16:41:00.7990556Z ##[group]Runner Image
+2026-09-26T16:41:00.7991516Z Image: ubuntu-24.04
+2026-09-26T16:41:00.7992643Z Version: 20260920.314.1
+2026-09-26T16:41:00.7995279Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-26T16:41:00.7998424Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+2026-09-26T16:41:00.8000345Z ##[endgroup]
+2026-09-26T16:41:00.8002547Z ##[group]GITHUB_TOKEN Permissions
+2026-09-26T16:41:00.8005656Z Contents: read
+2026-09-26T16:41:00.8006633Z Metadata: read
+2026-09-26T16:41:00.8007973Z Pages: write
+2026-09-26T16:41:00.8009077Z ##[endgroup]
+2026-09-26T16:41:00.8012583Z Secret source: Actions
+2026-09-26T16:41:00.8014346Z Cache mode: write
+2026-09-26T16:41:00.8016040Z Prepare workflow directory
+2026-09-26T16:41:00.8517174Z Prepare all required actions
+2026-09-26T16:41:00.8590879Z Getting action download info
+2026-09-26T16:41:01.0984612Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-26T16:41:01.1901268Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-09-26T16:41:01.2874136Z Download action repository 'pnpm/action-setup@v4' (SHA:b906affcce14559ad1aafd4ab0e942779e9f58b1)
+2026-09-26T16:41:01.6518342Z Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+2026-09-26T16:41:01.8827098Z Getting action download info
+2026-09-26T16:41:01.9749591Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-09-26T16:41:02.1235650Z Complete job name: build
+2026-09-26T16:41:02.2214039Z ##[group]Run actions/checkout@v4
+2026-09-26T16:41:02.2215501Z with:
+2026-09-26T16:41:02.2216360Z   repository: Nf-khan-com/mywebsite
+2026-09-26T16:41:02.2225568Z   token: ***
+2026-09-26T16:41:02.2226411Z   ssh-strict: true
+2026-09-26T16:41:02.2227248Z   ssh-user: git
+2026-09-26T16:41:02.2228265Z   persist-credentials: true
+2026-09-26T16:41:02.2229217Z   clean: true
+2026-09-26T16:41:02.2230073Z   sparse-checkout-cone-mode: true
+2026-09-26T16:41:02.2231103Z   fetch-depth: 1
+2026-09-26T16:41:02.2231925Z   fetch-tags: false
+2026-09-26T16:41:02.2232791Z   show-progress: true
+2026-09-26T16:41:02.2233684Z   lfs: false
+2026-09-26T16:41:02.2234483Z   submodules: false
+2026-09-26T16:41:02.2235378Z   set-safe-directory: true
+2026-09-26T16:41:02.2236394Z   allow-unsafe-pr-checkout: false
+2026-09-26T16:41:02.2237913Z ##[endgroup]
+2026-09-26T16:41:02.3427951Z Syncing repository: Nf-khan-com/mywebsite
+2026-09-26T16:41:02.3431523Z ##[group]Getting Git version info
+2026-09-26T16:41:02.3433767Z Working directory is '/home/runner/work/mywebsite/mywebsite'
+2026-09-26T16:41:02.3435875Z [command]/usr/bin/git version
+2026-09-26T16:41:02.3489604Z git version 2.55.0
+2026-09-26T16:41:02.3531467Z ##[endgroup]
+2026-09-26T16:41:02.3539954Z Temporarily overriding HOME='/home/runner/work/_temp/785fe2cc-66ce-42c2-828d-a15a93d411a9' before making global git config changes
+2026-09-26T16:41:02.3543002Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-26T16:41:02.3546713Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/mywebsite/mywebsite
+2026-09-26T16:41:02.3608502Z Deleting the contents of '/home/runner/work/mywebsite/mywebsite'
+2026-09-26T16:41:02.3612366Z ##[group]Initializing the repository
+2026-09-26T16:41:02.3618652Z [command]/usr/bin/git init /home/runner/work/mywebsite/mywebsite
+2026-09-26T16:41:02.3739137Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-26T16:41:02.3744110Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-26T16:41:02.3747622Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-26T16:41:02.3750852Z hint: call:
+2026-09-26T16:41:02.3752380Z hint:
+2026-09-26T16:41:02.3754197Z hint: 	git config --global init.defaultBranch <name>
+2026-09-26T16:41:02.3756572Z hint:
+2026-09-26T16:41:02.3758958Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-26T16:41:02.3761850Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-26T16:41:02.3763794Z hint:
+2026-09-26T16:41:02.3765768Z hint: 	git branch -m <name>
+2026-09-26T16:41:02.3768047Z hint:
+2026-09-26T16:41:02.3770497Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-26T16:41:02.3774468Z Initialized empty Git repository in /home/runner/work/mywebsite/mywebsite/.git/
+2026-09-26T16:41:02.3781510Z [command]/usr/bin/git remote add origin https://github.com/Nf-khan-com/mywebsite
+2026-09-26T16:41:02.3822686Z ##[endgroup]
+2026-09-26T16:41:02.3825188Z ##[group]Disabling automatic garbage collection
+2026-09-26T16:41:02.3827578Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-26T16:41:02.3864835Z ##[endgroup]
+2026-09-26T16:41:02.3867213Z ##[group]Setting up auth
+2026-09-26T16:41:02.3872082Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-26T16:41:02.3925076Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-26T16:41:02.4332450Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-26T16:41:02.4394012Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-26T16:41:02.4625104Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-26T16:41:02.4665909Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-26T16:41:02.4910387Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-26T16:41:02.4955693Z ##[endgroup]
+2026-09-26T16:41:02.4957301Z ##[group]Fetching the repository
+2026-09-26T16:41:02.4969385Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +271e294dc584c3b9df616946e6b3d5d9c63621e4:refs/remotes/origin/main
+2026-09-26T16:41:03.3990465Z From https://github.com/Nf-khan-com/mywebsite
+2026-09-26T16:41:03.3992167Z  * [new ref]         271e294dc584c3b9df616946e6b3d5d9c63621e4 -> origin/main
+2026-09-26T16:41:03.3996573Z ##[endgroup]
+2026-09-26T16:41:03.3997506Z ##[group]Determining the checkout info
+2026-09-26T16:41:03.4000345Z ##[endgroup]
+2026-09-26T16:41:03.4005551Z [command]/usr/bin/git sparse-checkout disable
+2026-09-26T16:41:03.4060954Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-26T16:41:03.4100637Z ##[group]Checking out the ref
+2026-09-26T16:41:03.4104490Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-09-26T16:41:03.4458599Z Switched to a new branch 'main'
+2026-09-26T16:41:03.4463706Z branch 'main' set up to track 'origin/main'.
+2026-09-26T16:41:03.4471310Z ##[endgroup]
+2026-09-26T16:41:03.4519216Z [command]/usr/bin/git log -1 --format=%H
+2026-09-26T16:41:03.4546910Z 271e294dc584c3b9df616946e6b3d5d9c63621e4
+2026-09-26T16:41:03.4842456Z ##[group]Run actions/setup-node@v4
+2026-09-26T16:41:03.4842924Z with:
+2026-09-26T16:41:03.4843272Z   node-version: 22
+2026-09-26T16:41:03.4843646Z   always-auth: false
+2026-09-26T16:41:03.4844022Z   check-latest: false
+2026-09-26T16:41:03.4846761Z   token: ***
+2026-09-26T16:41:03.4847124Z ##[endgroup]
+2026-09-26T16:41:03.6387697Z (node:2301) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-26T16:41:03.6389699Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-26T16:41:03.6392199Z Found in cache @ /opt/hostedtoolcache/node/22.23.2/x64
+2026-09-26T16:41:03.6393627Z ##[group]Environment details
+2026-09-26T16:41:04.0533746Z node: v22.23.2
+2026-09-26T16:41:04.0534532Z npm: 10.9.8
+2026-09-26T16:41:04.0535115Z yarn: 1.22.22
+2026-09-26T16:41:04.0536175Z ##[endgroup]
+2026-09-26T16:41:04.0692049Z ##[group]Run corepack enable
+2026-09-26T16:41:04.0692582Z [36;1mcorepack enable[0m
+2026-09-26T16:41:04.0994454Z shell: /usr/bin/bash -e {0}
+2026-09-26T16:41:04.0994917Z ##[endgroup]
+2026-09-26T16:41:04.2429194Z ##[group]Run pnpm/action-setup@v4
+2026-09-26T16:41:04.2429635Z with:
+2026-09-26T16:41:04.2429962Z   dest: ~/setup-pnpm
+2026-09-26T16:41:04.2430307Z   run_install: null
+2026-09-26T16:41:04.2430655Z   cache: false
+2026-09-26T16:41:04.2431001Z   cache_dependency_path: pnpm-lock.yaml
+2026-09-26T16:41:04.2431434Z   package_json_file: package.json
+2026-09-26T16:41:04.2431829Z   standalone: false
+2026-09-26T16:41:04.2432160Z ##[endgroup]
+2026-09-26T16:41:04.3927593Z ##[group]Running self-installer...
+2026-09-26T16:41:04.8492333Z (node:2356) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-09-26T16:41:04.8493657Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-26T16:41:05.0256479Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-09-26T16:41:05.0368330Z Packages: +1
+2026-09-26T16:41:05.0369131Z +
+2026-09-26T16:41:05.4867900Z Progress: resolved 1, reused 0, downloaded 1, added 1, done
+2026-09-26T16:41:05.5229506Z 
+2026-09-26T16:41:05.5230512Z dependencies:
+2026-09-26T16:41:05.5231394Z + pnpm 10.4.1 (12.6.0 is available)
+2026-09-26T16:41:05.5231867Z 
+2026-09-26T16:41:05.5262563Z Done in 936ms
+2026-09-26T16:41:05.5504334Z ##[endgroup]
+2026-09-26T16:41:05.5505212Z Installation Completed!
+2026-09-26T16:41:05.5681023Z ##[group]Run pnpm install --frozen-lockfile
+2026-09-26T16:41:05.5681448Z [36;1mpnpm install --frozen-lockfile[0m
+2026-09-26T16:41:05.5746554Z shell: /usr/bin/bash -e {0}
+2026-09-26T16:41:05.5746842Z env:
+2026-09-26T16:41:05.5747137Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-09-26T16:41:05.5747458Z ##[endgroup]
+2026-09-26T16:41:06.1173943Z Lockfile is up to date, resolution step is skipped
+2026-09-26T16:41:06.1892424Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-09-26T16:41:06.3035586Z Packages: +620
+2026-09-26T16:41:06.3036290Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-09-26T16:41:07.1908739Z Progress: resolved 620, reused 0, downloaded 171, added 160
+2026-09-26T16:41:08.1911945Z Progress: resolved 620, reused 0, downloaded 217, added 203
+2026-09-26T16:41:09.1911732Z Progress: resolved 620, reused 0, downloaded 430, added 430
+2026-09-26T16:41:10.1923706Z Progress: resolved 620, reused 0, downloaded 618, added 618
+2026-09-26T16:41:10.2339397Z Progress: resolved 620, reused 0, downloaded 620, added 620, done
+2026-09-26T16:41:10.5763437Z 
+2026-09-26T16:41:10.5764049Z dependencies:
+2026-09-26T16:41:10.5764901Z + @hookform/resolvers 5.2.2
+2026-09-26T16:41:10.5765592Z + @radix-ui/react-accordion 1.2.12
+2026-09-26T16:41:10.5766307Z + @radix-ui/react-alert-dialog 1.1.15
+2026-09-26T16:41:10.5767016Z + @radix-ui/react-aspect-ratio 1.1.7
+2026-09-26T16:41:10.5767625Z + @radix-ui/react-avatar 1.1.10
+2026-09-26T16:41:10.5768889Z + @radix-ui/react-checkbox 1.3.3
+2026-09-26T16:41:10.5769462Z + @radix-ui/react-collapsible 1.1.12
+2026-09-26T16:41:10.5770058Z + @radix-ui/react-context-menu 2.2.16
+2026-09-26T16:41:10.5770615Z + @radix-ui/react-dialog 1.1.15
+2026-09-26T16:41:10.5771184Z + @radix-ui/react-dropdown-menu 2.1.16
+2026-09-26T16:41:10.5771603Z + @radix-ui/react-hover-card 1.1.15
+2026-09-26T16:41:10.5772000Z + @radix-ui/react-label 2.1.7
+2026-09-26T16:41:10.5772542Z + @radix-ui/react-menubar 1.1.16
+2026-09-26T16:41:10.5773120Z + @radix-ui/react-navigation-menu 1.2.14
+2026-09-26T16:41:10.5773536Z + @radix-ui/react-popover 1.1.15
+2026-09-26T16:41:10.5773862Z + @radix-ui/react-progress 1.1.7
+2026-09-26T16:41:10.5774196Z + @radix-ui/react-radio-group 1.3.8
+2026-09-26T16:41:10.5774547Z + @radix-ui/react-scroll-area 1.2.10
+2026-09-26T16:41:10.5774887Z + @radix-ui/react-select 2.2.6
+2026-09-26T16:41:10.5775219Z + @radix-ui/react-separator 1.1.7
+2026-09-26T16:41:10.5775532Z + @radix-ui/react-slider 1.3.6
+2026-09-26T16:41:10.5775865Z + @radix-ui/react-slot 1.2.3
+2026-09-26T16:41:10.5776163Z + @radix-ui/react-switch 1.2.6
+2026-09-26T16:41:10.5776451Z + @radix-ui/react-tabs 1.1.13
+2026-09-26T16:41:10.5777065Z + @radix-ui/react-toggle 1.1.10
+2026-09-26T16:41:10.5777650Z + @radix-ui/react-toggle-group 1.1.11
+2026-09-26T16:41:10.5778649Z + @radix-ui/react-tooltip 1.2.8
+2026-09-26T16:41:10.5778927Z + axios 1.12.2
+2026-09-26T16:41:10.5779203Z + class-variance-authority 0.7.1
+2026-09-26T16:41:10.5779468Z + clsx 2.1.1
+2026-09-26T16:41:10.5779681Z + cmdk 1.1.1
+2026-09-26T16:41:10.5779913Z + embla-carousel-react 8.6.0
+2026-09-26T16:41:10.5780162Z + express 4.21.2
+2026-09-26T16:41:10.5780399Z + framer-motion 12.23.22
+2026-09-26T16:41:10.5780649Z + input-otp 1.4.2
+2026-09-26T16:41:10.5780883Z + lucide-react 0.453.0
+2026-09-26T16:41:10.5781104Z + nanoid 5.1.6
+2026-09-26T16:41:10.5781334Z + next-themes 0.4.6
+2026-09-26T16:41:10.5781549Z + react 19.2.1
+2026-09-26T16:41:10.5781783Z + react-day-picker 9.11.1
+2026-09-26T16:41:10.5782052Z + react-dom 19.2.1
+2026-09-26T16:41:10.5782293Z + react-hook-form 7.64.0
+2026-09-26T16:41:10.5782591Z + react-resizable-panels 3.0.6
+2026-09-26T16:41:10.5782868Z + recharts 2.15.4
+2026-09-26T16:41:10.5783072Z + sonner 2.0.7
+2026-09-26T16:41:10.5783289Z + streamdown 1.4.0
+2026-09-26T16:41:10.5783520Z + tailwind-merge 3.3.1
+2026-09-26T16:41:10.5783772Z + tailwindcss-animate 1.0.7
+2026-09-26T16:41:10.5784010Z + vaul 1.1.2
+2026-09-26T16:41:10.5784204Z + wouter 3.7.1
+2026-09-26T16:41:10.5784403Z + zod 4.1.12
+2026-09-26T16:41:10.5784830Z 
+2026-09-26T16:41:10.5785075Z devDependencies:
+2026-09-26T16:41:10.5785619Z + @builder.io/vite-plugin-jsx-loc 0.1.1
+2026-09-26T16:41:10.5786206Z + @tailwindcss/typography 0.5.19
+2026-09-26T16:41:10.5786676Z + @tailwindcss/vite 4.1.14
+2026-09-26T16:41:10.5787112Z + @types/express 4.17.21
+2026-09-26T16:41:10.5787549Z + @types/google.maps 3.58.1
+2026-09-26T16:41:10.5788268Z + @types/node 24.7.0
+2026-09-26T16:41:10.5788663Z + @types/react 19.2.1
+2026-09-26T16:41:10.5789064Z + @types/react-dom 19.2.1
+2026-09-26T16:41:10.5789527Z + @vitejs/plugin-react 5.0.4
+2026-09-26T16:41:10.5789920Z + add 2.0.6
+2026-09-26T16:41:10.5790273Z + autoprefixer 10.4.21
+2026-09-26T16:41:10.5790662Z + esbuild 0.25.10
+2026-09-26T16:41:10.5791088Z + pnpm 10.18.1
+2026-09-26T16:41:10.5791455Z + postcss 8.5.6
+2026-09-26T16:41:10.5791796Z + prettier 3.6.2
+2026-09-26T16:41:10.5792205Z + tailwindcss 4.1.14
+2026-09-26T16:41:10.5792565Z + tsx 4.20.6
+2026-09-26T16:41:10.5792922Z + tw-animate-css 1.4.0
+2026-09-26T16:41:10.5793348Z + typescript 5.6.3
+2026-09-26T16:41:10.5793686Z + vite 7.1.9
+2026-09-26T16:41:10.5794110Z + vite-plugin-manus-runtime 0.0.58
+2026-09-26T16:41:10.5794545Z + vitest 2.1.9
+2026-09-26T16:41:10.5794768Z 
+2026-09-26T16:41:10.5799314Z ╭ Warning ─────────────────────────────────────────────────────────────────────╮│                                                                              ││   Ignored build scripts: @tailwindcss/oxide, esbuild.                        ││   Run "pnpm approve-builds" to pick which dependencies should be allowed     ││   to run scripts.                                                            ││                                                                              │╰──────────────────────────────────────────────────────────────────────────────╯
+2026-09-26T16:41:10.5802074Z 
+2026-09-26T16:41:10.6029613Z Done in 4.9s using pnpm v10.4.1
+2026-09-26T16:41:10.6521969Z ##[group]Run pnpm build
+2026-09-26T16:41:10.6522288Z [36;1mpnpm build[0m
+2026-09-26T16:41:10.6586480Z shell: /usr/bin/bash -e {0}
+2026-09-26T16:41:10.6586778Z env:
+2026-09-26T16:41:10.6587036Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-09-26T16:41:10.6587353Z ##[endgroup]
+2026-09-26T16:41:10.9693482Z 
+2026-09-26T16:41:10.9694216Z > nf-khan@1.0.0 build /home/runner/work/mywebsite/mywebsite
+2026-09-26T16:41:10.9695126Z > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+2026-09-26T16:41:10.9695632Z 
+2026-09-26T16:41:11.3906357Z [36mvite v7.1.9 [32mbuilding for production...[36m[39m
+2026-09-26T16:41:11.4341701Z [33m[1m(!) %VITE_ANALYTICS_ENDPOINT% is not defined in env variables found in /index.html. Is the variable mistyped?[22m[39m
+2026-09-26T16:41:11.4343838Z [33m[1m(!) %VITE_ANALYTICS_WEBSITE_ID% is not defined in env variables found in /index.html. Is the variable mistyped?[22m[39m
+2026-09-26T16:41:11.4506572Z <script src="%VITE_ANALYTICS_ENDPOINT%/umami"> in "/index.html" can't be bundled without type="module" attribute
+2026-09-26T16:41:11.4692877Z transforming...
+2026-09-26T16:41:13.9358810Z [32m✓[39m 1617 modules transformed.
+2026-09-26T16:41:14.1594449Z rendering chunks...
+2026-09-26T16:41:14.1702194Z computing gzip size...
+2026-09-26T16:41:14.1880296Z [2m../dist/public/[22m[32mindex.html                 [39m[1m[2m367.84 kB[22m[1m[22m[2m │ gzip: 105.67 kB[22m
+2026-09-26T16:41:14.1882426Z [2m../dist/public/[22m[2massets/[22m[35mindex-DHcyZqdp.css  [39m[1m[2m129.32 kB[22m[1m[22m[2m │ gzip:  20.78 kB[22m
+2026-09-26T16:41:14.1884536Z [2m../dist/public/[22m[2massets/[22m[36mindex-afb_oLJA.js   [39m[1m[2m352.15 kB[22m[1m[22m[2m │ gzip: 107.45 kB[22m
+2026-09-26T16:41:14.1885900Z [32m✓ built in 2.77s[39m
+2026-09-26T16:41:14.2753351Z 
+2026-09-26T16:41:14.2753663Z   dist/index.js  788b 
+2026-09-26T16:41:14.2753998Z 
+2026-09-26T16:41:14.2754404Z ⚡ Done in 2ms
+2026-09-26T16:41:14.2971122Z ##[group]Run actions/upload-pages-artifact@v3
+2026-09-26T16:41:14.2971465Z with:
+2026-09-26T16:41:14.2971664Z   path: ./dist/public
+2026-09-26T16:41:14.2971879Z   name: github-pages
+2026-09-26T16:41:14.2972087Z   retention-days: 1
+2026-09-26T16:41:14.2972283Z env:
+2026-09-26T16:41:14.2972521Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-09-26T16:41:14.2972826Z ##[endgroup]
+2026-09-26T16:41:14.3035288Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run]
+2026-09-26T16:41:14.3062310Z ##[group]Run echo ::group::Archive artifact
+2026-09-26T16:41:14.3062658Z [36;1mecho ::group::Archive artifact[0m
+2026-09-26T16:41:14.3062946Z [36;1mtar \[0m
+2026-09-26T16:41:14.3063180Z [36;1m  --dereference --hard-dereference \[0m
+2026-09-26T16:41:14.3063487Z [36;1m  --directory "$INPUT_PATH" \[0m
+2026-09-26T16:41:14.3063785Z [36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \[0m
+2026-09-26T16:41:14.3064073Z [36;1m  --exclude=.git \[0m
+2026-09-26T16:41:14.3064348Z [36;1m  --exclude=.github \[0m
+2026-09-26T16:41:14.3064587Z [36;1m  .[0m
+2026-09-26T16:41:14.3064783Z [36;1mecho ::endgroup::[0m
+2026-09-26T16:41:14.3092183Z shell: /usr/bin/sh -e {0}
+2026-09-26T16:41:14.3092435Z env:
+2026-09-26T16:41:14.3092686Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-09-26T16:41:14.3093011Z   INPUT_PATH: ./dist/public
+2026-09-26T16:41:14.3093236Z ##[endgroup]
+2026-09-26T16:41:14.3136912Z ##[group]Archive artifact
+2026-09-26T16:41:14.3150782Z ./
+2026-09-26T16:41:14.3151120Z ./.nojekyll
+2026-09-26T16:41:14.3151437Z ./assets/
+2026-09-26T16:41:14.3151824Z ./assets/index-DHcyZqdp.css
+2026-09-26T16:41:14.3152788Z ./assets/index-afb_oLJA.js
+2026-09-26T16:41:14.3155847Z ./nfkhan-hero.jpg
+2026-09-26T16:41:14.3192997Z ./index.html
+2026-09-26T16:41:14.3196318Z ./__manus__/
+2026-09-26T16:41:14.3196896Z ./__manus__/debug-collector.js
+2026-09-26T16:41:14.3197313Z ./.gitkeep
+2026-09-26T16:41:14.3199848Z ##[endgroup]
+2026-09-26T16:41:14.3212072Z ##[end-action id=__actions_upload-pages-artifact.__run;outcome=success;conclusion=success;duration_ms=17]
+2026-09-26T16:41:14.3215914Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_2]
+2026-09-26T16:41:14.3221585Z ##[end-action id=__actions_upload-pages-artifact.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-09-26T16:41:14.3224290Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_3]
+2026-09-26T16:41:14.3228130Z ##[end-action id=__actions_upload-pages-artifact.__run_3;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-09-26T16:41:14.3230187Z ##[start-action display=Upload artifact;id=__actions_upload-pages-artifact.upload-artifact]
+2026-09-26T16:41:14.3282969Z ##[group]Run actions/upload-artifact@v4
+2026-09-26T16:41:14.3283244Z with:
+2026-09-26T16:41:14.3283431Z   name: github-pages
+2026-09-26T16:41:14.3283667Z   path: /home/runner/work/_temp/artifact.tar
+2026-09-26T16:41:14.3283949Z   retention-days: 1
+2026-09-26T16:41:14.3284173Z   if-no-files-found: error
+2026-09-26T16:41:14.3284408Z   compression-level: 6
+2026-09-26T16:41:14.3284617Z   overwrite: false
+2026-09-26T16:41:14.3284827Z   include-hidden-files: false
+2026-09-26T16:41:14.3285057Z env:
+2026-09-26T16:41:14.3285287Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-09-26T16:41:14.3285592Z ##[endgroup]
+2026-09-26T16:41:14.5044684Z (node:2465) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-26T16:41:14.5045880Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-26T16:41:14.5129216Z With the provided path, there will be 1 file uploaded
+2026-09-26T16:41:14.5177544Z Artifact name is valid!
+2026-09-26T16:41:14.5188470Z Root directory input is valid!
+2026-09-26T16:41:14.7561518Z Beginning upload of artifact content to blob storage
+2026-09-26T16:41:14.9629026Z (node:2465) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-09-26T16:41:15.2734960Z Uploaded bytes 4645657
+2026-09-26T16:41:15.3047579Z Finished uploading artifact content to blob storage!
+2026-09-26T16:41:15.3049292Z SHA256 digest of uploaded artifact zip is 20bcb79c71bbe9ee7d0ad66a48508acd1ba1d8633034d4dc9bbc7988231a8fef
+2026-09-26T16:41:15.3050499Z Finalizing artifact upload
+2026-09-26T16:41:15.5258880Z Artifact github-pages.zip successfully finalized. Artifact ID 10910303738
+2026-09-26T16:41:15.5260224Z Artifact github-pages has been successfully uploaded! Final size is 4645657 bytes. Artifact ID is 10910303738
+2026-09-26T16:41:15.5268620Z Artifact download URL: https://github.com/Nf-khan-com/mywebsite/actions/runs/36256322670/artifacts/10910303738
+2026-09-26T16:41:15.5388343Z ##[end-action id=__actions_upload-pages-artifact.upload-artifact;outcome=success;conclusion=success;duration_ms=1215]
+2026-09-26T16:41:15.5484175Z Post job cleanup.
+2026-09-26T16:41:15.7003999Z Pruning is unnecessary.
+2026-09-26T16:41:15.7172557Z Post job cleanup.
+2026-09-26T16:41:15.8562167Z (node:2485) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-26T16:41:15.8563624Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-26T16:41:15.8730099Z Post job cleanup.
+2026-09-26T16:41:15.9643464Z [command]/usr/bin/git version
+2026-09-26T16:41:15.9692982Z git version 2.55.0
+2026-09-26T16:41:15.9740377Z Temporarily overriding HOME='/home/runner/work/_temp/52723360-2071-47b9-b9bf-1a56d6e0dd31' before making global git config changes
+2026-09-26T16:41:15.9742343Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-26T16:41:15.9747649Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/mywebsite/mywebsite
+2026-09-26T16:41:15.9793299Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-26T16:41:15.9832069Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-26T16:41:16.0094172Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-26T16:41:16.0124125Z http.https://github.com/.extraheader
+2026-09-26T16:41:16.0136548Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-26T16:41:16.0174818Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-26T16:41:16.0453053Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-26T16:41:16.0497576Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-26T16:41:16.0962351Z Cleaning up orphan processes
+2026-09-26T16:41:16.1246316Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4, pnpm/action-setup@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
